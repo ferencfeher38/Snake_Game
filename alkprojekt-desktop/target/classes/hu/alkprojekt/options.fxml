@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1000" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkprojekt.controller.optionsController">
+    <Pane fx:id="paneGame" layoutX="66.0" layoutY="87.0" prefHeight="627.0" prefWidth="820.0" style="-fx-background-color: white;" />
+    <Pane fx:id="paneOptions" layoutX="189.0" layoutY="54.0" prefHeight="590.0" prefWidth="400.0" style="-fx-background-color: grey;">
+        <Label layoutX="137.0" layoutY="101.0" text="Mód">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="217.0" layoutY="35.0" text="Opciók">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <Label layoutX="63.0" layoutY="136.0" text="Kígyó színe">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="6.0" layoutY="171.0" text="Kígyó sebessége">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="42.0" layoutY="206.0" text="Pálya mérete">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="81.0" layoutY="241.0" text="Kaja színe">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="81.0" layoutY="276.0" text="Kaja szám">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="156.0" layoutY="311.0" text="Fal">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <ColorPicker fx:id="comboBoxFruitColor" layoutX="198.0" layoutY="246.0" />
+        <ColorPicker fx:id="comboBoxSnakeColor" layoutX="198.0" layoutY="141.0" />
+        <ComboBox fx:id="comboBoxSnakeSpeed" layoutX="198.0" layoutY="176.0" prefWidth="150.0" />
+        <ComboBox fx:id="comboBoxGridSize" layoutX="198.0" layoutY="211.0" prefWidth="150.0" />
+        <ComboBox layoutX="198.0" layoutY="106.0" prefWidth="150.0" />
+        <ComboBox fx:id="comboBoxWall" layoutX="198.0" layoutY="316.0" prefWidth="150.0" />
+        <ComboBox fx:id="comboBoxNumberOfFruit" layoutX="198.0" layoutY="281.0" prefWidth="150.0" />
+        <Button alignment="BOTTOM_CENTER" layoutX="183.0" layoutY="357.0" mnemonicParsing="false" onAction="#buttonStartGamePressed" text="Játék indítása">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Button>
+    </Pane>
+    <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Kilépés">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exit" text="Kilépés" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Info">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="Info" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+   <Pane fx:id="paneGameOver" layoutX="22.0" layoutY="43.0" prefHeight="738.0" prefWidth="957.0" style="-fx-background-color: grey;">
+      <children>
+         <Label layoutX="291.0" layoutY="178.0" text="Vége a játéknak!">
+            <font>
+               <Font name="System Bold" size="48.0" />
+            </font>
+         </Label>
+         <Button onAction="#buttonPlayAgainPressed" layoutX="576.0" layoutY="449.0" mnemonicParsing="false" text="Új játék">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font>
+         </Button>
+         <Button fx:id="buttonChangeOptions" onAction="#buttonChangeOptionsPressed" layoutX="123.0" layoutY="449.0" mnemonicParsing="false" text="Opciók">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font>
+         </Button>
+         <Label fx:id="labelScore" layoutX="291.0" layoutY="316.0">
+            <font>
+               <Font name="System Bold" size="36.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+</Pane>

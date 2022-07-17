@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1000" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.alkprojekt.controller.mainController">
+   <center>
+      <Pane prefHeight="384.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="360.0" layoutY="406.0" mnemonicParsing="false" onAction="#switchToOptions" text="Játék indítása">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Button>
+            <Label layoutX="410.0" layoutY="194.0" text="Snake">
+               <font>
+                  <Font name="System Bold" size="64.0" />
+               </font>
+            </Label>
+            <Button onAction="#switchToToplist" fx:id="buttonToplist" layoutX="439.0" layoutY="570.0" mnemonicParsing="false" text="Toplista">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Kilépés">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#exit" text="Kilépés" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Info">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Info" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
